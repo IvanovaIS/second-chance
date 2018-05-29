@@ -1,0 +1,167 @@
+.screencomments {
+
+	display: flex;
+	justify-content: space-between;
+	background-color: #333;
+
+	height: 100%;
+	position: relative;
+
+}
+
+.screencomments__list {
+
+	width: 100%;
+
+
+	display: flex;
+	flex-wrap: wrap;
+
+
+	margin: 0;
+	padding: 0;
+
+
+	& .screencomments__item {
+
+
+		position: relative;
+
+		flex-basis: 25%;
+		height: 50%;
+
+		@include tablet {
+			flex-basis: 50%;
+			height: 25%;
+		}
+
+		&:hover .screencomments__content {
+			opacity: 1;
+
+		}
+
+		&:hover:before {
+			content: "";
+			display: block;
+
+			width: 100%;
+			height: 100%;
+
+			background-color: rgba(69, 69, 69, 0.7);
+
+			position: absolute;
+			top: 0; //			@include tablet {
+			//				padding-top: 6%;
+			//			}
+		}
+
+
+
+	}
+
+}
+
+.screencomments__img {
+
+	width: 100%;
+	height: 100%;
+
+}
+
+.screencomments__avatar {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+
+.screencomments__content {
+
+
+	position: absolute;
+	top: rem(50px);
+	left: rem(20px);
+
+
+	opacity: 0;
+
+	@include tablet {
+		top: rem(30px);
+		left: 50%;
+		transform: translateX(-50%);
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+
+		@include phone {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+			justify-content: space-around;
+			align-items: center;
+		}
+
+	}
+
+}
+
+.screencomments__title {
+	font-family: 'Gagalin-Regular', sans-serif;
+	font-size: 0.875rem;
+	color: #fff;
+	margin-bottom: rem(20px);
+	font-weight: normal;
+
+	@include tablet {
+		margin-bottom: 0;
+	}
+
+	@include phone {
+		font-size: 1.85rem;
+		margin-bottom: rem(30px);
+
+	}
+}
+
+.screencomments__text {
+	font-family: 'ubuntulight', sans-serif;
+	font-size: 0.875rem;
+	color: #fff;
+	line-height: rem(20px);
+	text-align: left;
+
+	@include tablet {
+		text-align: center;
+	}
+
+	@include phone {
+		display: none;
+
+	}
+}
+
+.screencomments__button {
+	@include button;
+	background-color: #2f3234;
+
+	@include phone {
+		font-size: 0;
+		position: relative;
+
+		&:after {
+			content: "читать отзыв";
+			font-size: 1rem;
+			padding: rem(15px) rem(15px);
+
+			left: 0;
+			top: 0;
+		}
+	}
+}

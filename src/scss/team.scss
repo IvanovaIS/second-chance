@@ -1,0 +1,173 @@
+.screenteam {
+	background-image: url(../img/team_screen/bg_team.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	position: relative;
+}
+
+.screenteam__container {
+	width: 49%;
+	min-height: 100vh;
+
+	background-color: rgba(47, 50, 52, 0.93);
+
+	position: absolute;
+	top: 0;
+	left: 51%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+ 
+	@include tablet {
+			left: 0;
+		width: 100%;
+	}
+	
+}
+
+
+
+.screenteam__title-text {
+	@include titlefont($yellow);
+	padding-bottom: rem(40px);
+	margin-top: rem(-30px);
+	margin-left: rem(-50px);
+	@include phone {
+		margin: 0;
+		text-align: center;
+	}
+}
+
+
+
+.screenteam__item {
+	margin-bottom: rem(25px);
+	
+	@include tablet {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+
+.screenteam__item-block {
+	background-color: transparent;
+	border: none;
+}
+.screenteam__name {
+	font-family: 'Gagalin-Regular';
+	font-size: 0.875rem;
+	color: #fff;
+
+
+	text-transform: uppercase;
+
+	margin-left: rem(20px);
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		border: 5px solid transparent;
+		border-top: 6px solid $yellow;
+	
+		
+		position: absolute;
+		top: rem(7px);
+		left: rem(-20px);
+	}
+	
+	@include tablet {
+		margin-bottom: rem(10px);
+	}
+	
+	@include phone {
+		font-size: rem(25px);
+}
+}
+
+.screenteam__item-block_active {
+	
+	.screenteam__name {
+	color: $yellow;
+
+	&:before {
+		transform: rotate(180deg);
+		top: rem(3px);
+	}
+	}
+	+ .screenteam__content {
+		height: 100%;
+	}
+}
+
+
+
+.screenteam__content {
+	margin-left: rem(20px);
+	padding-top: rem(10px);
+	
+	height: 0;
+	overflow: hidden;
+	
+	
+	display: flex;
+
+	
+	@include tablet {
+		margin-top: rem(10px);
+
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+
+
+
+.screenteam__avatar-img {
+	border-radius: 50%;
+	width: 6.25rem;
+	height: 6.25rem;
+
+	object-fit: cover;
+	
+	@include tablet{
+		margin: 0 auto;
+	}
+	
+}
+
+.screenteam__info {
+	padding-left: rem(20px);
+	
+	max-width: rem(230px);
+}
+
+.screenteam__position {
+	font-family: 'ubuntubold';
+	color: #fff;
+	font-size: 0.875rem;
+	text-transform: capitalize;
+	font-weight: 700;
+  
+	padding-bottom: rem(15px);
+	
+	@include tablet {
+		text-align: center;
+	}
+	
+}
+
+.screenteam__text {
+	@extend %contenttext;
+}

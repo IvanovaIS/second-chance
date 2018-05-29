@@ -1,0 +1,157 @@
+// .best {
+//   background-image: url('../img/bg/best-bg.png');
+//   background-repeat: no-repeat;
+//   background-position: center bottom;
+//   background-size: cover;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .section__title--best {
+//   color: #2f3234;
+//   padding: 0;
+//   margin-bottom: rem(60px);
+// }
+
+.screenbest {
+	background-color: #fff;
+	background-image: url(../img/best_screen/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+
+	display: flex;
+	align-items: center;
+}
+
+.screenbest__container {
+
+
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+
+	@include phone {
+		align-content: center;
+	}
+
+
+}
+
+.screenbest__title-text {
+
+	@include titlefont(#2f3234);
+	text-align: center;
+   
+	margin-top: rem(110px);
+	margin-bottom: rem(40px);
+	
+	@include phone {
+		margin-bottom: rem(50px);
+	}
+
+}
+
+
+.screenbest__list {
+	margin: 0;
+	padding: 0;
+
+	display: flex;
+	justify-content: center;
+
+	@include phone {
+		flex-direction: column;
+	}
+
+	& .screenbest__item {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	
+		align-items: center;
+
+		margin-right: 5%;
+		flex-basis: 25%;
+
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@include phone {
+
+			flex-wrap: nowrap;
+			flex-direction: row;
+
+			margin-bottom: rem(50px);
+			padding: 0 rem(15px);
+			
+		}
+
+	}
+
+
+
+}
+
+.screenbest__item-img {
+
+	width: rem(115px);
+	height: rem(105px);
+margin-bottom: rem(20px);
+	@include phone {
+
+		margin-right: rem(20px);
+		flex: 0 0 auto;
+
+	}
+
+}
+
+@each $screenbestimg in (meat, hand, natural) {
+	.screenbest__item-img_#{$screenbestimg} {
+		background-image: url(../img/icons/#{$screenbestimg}.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+
+}
+
+.screenbest__item-row {
+	@include phone {
+		text-align: left;
+	}
+}
+
+.screenbest__item-title {
+
+	text-align: center;
+	vertical-align: baseline;
+	font-family: 'Lifehack-Medium', sans-serif;
+	font-size: 1.5rem;
+margin-bottom: rem(15px);
+
+	@include phone {
+		text-align: left;
+		margin-bottom: rem(25px);
+	}
+
+}
+
+
+.screenbest__item-content {
+	font-family: 'ubuntulight', sans-serif;
+	color: rgba(47, 50, 52, 0.8);
+	font-size: 0.8rem;
+	text-align: justify;
+	line-height: rem(24px);
+
+	@include phone {
+		text-align: left;
+	}
+
+
+}

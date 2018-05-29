@@ -1,0 +1,118 @@
+  @function rem($px){
+    @return $px/16px + 0rem;
+  }
+  
+  @mixin titlefont($color) {
+    font-family: 'Gagalin-Regular', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color;
+  }
+  
+  @mixin menufont {
+    font-family: 'ubuntumedium', sans-serif;
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+  
+  }
+  
+  
+  @mixin button {
+    
+    border-radius: 5px;
+  
+  
+    border: none;
+    padding: rem(8px) rem(15px);
+    background-color: #e45028;
+  
+    cursor: pointer;
+    
+  //	    display: flex;
+  //	align-items: center;
+  //	justify-content: center;
+    
+    @include menufont;
+  
+    &:hover {
+      color: burlywood;
+    }
+  
+  }
+  
+  %contenttext {
+    font-family: 'ubuntulight', sans-serif;
+    color: #fff;
+    font-size: 0.875rem;
+    text-transform: full-width;
+    
+  }
+  
+  
+  @mixin screenformfield($width){
+    width: $width;
+    height: rem(35px);
+    
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    
+    padding-left: rem(15px);
+  } 
+  
+    
+    %screenformtext {
+    color: #2f3234;
+    padding-left: rem(20px);
+    text-transform: capitalize;
+    box-sizing:border-box;
+  
+    &:focus {
+      border: 2px solid $yellow;
+    }
+  }
+    
+  @mixin closebtn($bgc){
+    width: 15px;
+    height: 3px;
+    background-color: $bgc;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    position:relative;
+    cursor: pointer;
+    &:before {
+      content:'';
+      display: block;
+      width: 15px;
+    height: 3px;
+    background-color: $bgc;
+    border-radius: 3px;
+    transform: rotate(90deg);
+      
+      position: absolute;
+      top: 0px;
+      left:0px;
+    }
+  }
+    
+  @mixin tablet {
+    @media screen and (max-width: 945px) {
+      @content;
+    }
+  }
+  
+  @mixin phone {
+    @media screen and (max-width: 490px) {
+      @content;
+    }
+  }
+    
+  
+  @mixin minimal {
+    @media screen and (max-width: 320px) {
+      @content;
+    }
+  }

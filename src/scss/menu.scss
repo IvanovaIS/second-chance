@@ -1,0 +1,166 @@
+.screenmenu {
+	background-image: url(../img/menu_screen/bg_screenmenu.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	position: relative;
+	 
+	width: 100%;
+	
+	overflow: hidden;
+}
+
+.screenmenu__title-text {
+	@include titlefont(#fff);
+	padding-top: 8%;
+	padding-left: 8%;
+
+	@include phone {
+		font-size: 3.85rem;
+	}
+}
+
+
+.screenmenu_accordeon {
+ 
+	width: 70%;
+	
+	position: absolute;
+	top: 0;
+	right: 0;
+
+display: flex;
+justify-content: flex-end;	
+	
+	@include tablet {
+		width: 100%;
+	}
+			
+	
+}
+
+
+.screenmenu__item {
+
+
+	display: flex;
+	justify-content: flex-end;
+
+	
+	.screenmenu__position-btn {
+		height: 100vh;
+		border: none;
+		background-color: transparent;
+//		max-width: rem(80px);
+		
+		margin: 0;
+		padding: 0;
+	}
+	.screenmenu__position {
+
+		position: relative;
+	
+		height: 100vh;
+		max-width: rem(80px);
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		
+	
+//	
+//	border:none;
+
+		@include phone {
+			max-width: rem(70px);
+		}
+	}
+
+	&:first-child .screenmenu__position {
+		background-image: url(../img/menu_screen/bg_meat.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	
+
+	}
+
+	&:nth-child(2) .screenmenu__position {
+		background-image: url(../img/menu_screen/bg_vegan.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+
+	}
+
+	&:last-child .screenmenu__position {
+		background-image: url(../img/menu_screen/bg_diet.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	
+
+	}
+}
+
+
+
+
+.screenmenu__position-block {
+	
+	transform: rotate(270deg);
+
+ 
+}
+
+.screenmenu__position-title {
+	font-family: 'Gagalin-Regular', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+
+  padding-left: 60%;
+	white-space: nowrap;
+	
+}
+
+
+
+
+
+.screenmenu__content {
+	min-height: 100vh;
+//	width: 75%;
+	background-color: rgba(76, 78, 80, 0.93);
+	
+	width: 0;
+	
+	
+}
+
+.screenmenu__content-text {
+@extend %contenttext;
+	line-height: rem(24px);
+	
+	padding: rem(50px) rem(30px);
+	
+	}
+
+//.screenmenu__position_active {
+//	+.screenmenu__content {
+//		width: 78%;
+//		@include tablet {
+//			width: 100%;
+//		}
+//	}
+	
+//	.screenmenu__position-title {
+//		color: $yellow;
+//			
+
+//	}
+//}
+
+.screenmenu__content-active {
+		width: 100%;
+		@include tablet {
+			width: 100%;
+	}}

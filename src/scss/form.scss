@@ -1,0 +1,206 @@
+.screenform {
+	background-image: url(../img/form_screen/bg-screenform.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	display: flex;
+	align-items: center;
+		
+}
+
+.screenform__container {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+	
+
+.screenform__title-text {
+	@include titlefont($yellow);
+//	margin-top: rem(-30px);
+		margin-bottom: rem(50px);
+	@include tablet {
+		text-align: center;
+	}
+}
+
+.screenform__form {
+	margin: 0 auto;
+	
+	display: flex;
+justify-content: space-between;
+	
+	.screenform__row {
+		display: flex;
+		width: 100%;
+		margin-bottom: rem(17px);
+		
+		@include phone {
+			justify-content: center;
+		}
+	}
+	
+	.screenform__row_phone {
+		@include phone {
+			margin-bottom: rem(35px);
+		}
+	}
+	
+	.screenform__column {
+		width: 100%;
+		max-width: rem(461px);
+		margin-right: rem(20px);
+         display: flex;
+		
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: flex-start;
+		
+		flex-basis: 50%;
+		
+		@include phone {
+			margin-right: 0;
+		}
+	}
+	
+	.screenform__field {
+	
+		margin-right: rem(20px);
+		flex:1;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	@include tablet {
+		flex-direction: column;
+	}
+	
+	
+}
+
+
+.screenform__label-name{
+	@extend %contenttext;
+	margin-bottom: rem(10px);
+	
+	
+}
+
+.screenform__field-item {
+	@include screenformfield(100%);
+	
+}
+
+
+
+.screenform__field-comment {
+	@include screenformfield(100%);
+	min-height: rem(110px);
+	
+	padding: rem(15px);
+	
+resize: none;
+	
+	
+}
+
+
+.screenform__radio {
+	margin-right: rem(10px);
+}
+
+
+.screenform__radio-item {
+	display: none;
+	
+	transition: 0.5s;
+	&:checked + .screenform__radiocustom:before {
+		opacity: 1;
+	}
+	
+}
+
+.screenform__radiocustom {
+	width: rem(15px);
+	height: rem(15px);
+	border-radius: 50%;
+	background-color: #fff;
+	
+	display: inline-block;
+	margin-right: rem(5px);
+	
+	position: relative;
+	
+	&:before {
+		content: "";
+		width: rem(7px);
+		height: rem(7px);
+		border-radius: 50%;
+		background-color: #e35028;
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		
+		opacity: 0;
+	}
+	
+}
+
+
+.screenform__checkbox-item {
+	display: none;
+	
+	transition: 0.5s;
+	
+	&:checked + .screenform__checkboxcustom:before {
+		opacity: 1;
+	}
+}
+
+
+
+.screenform__checkboxcustom {
+	position: relative;
+	
+	margin-right: rem(5px);
+	display: inline-block;
+	width: rem(15px);
+	height: rem(15px);
+	background-color: #fff;
+	
+	&:before {
+		content: "";
+		width: rem(11px);
+		height: rem(9px);
+		
+		background-image: url(../img/form_screen/check.png);
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		
+	}
+}
+
+
+
+.screenform__button-order {
+	@include button;
+	margin-right: rem(20px);
+}
+
+
+
+.screenform__button-clear {
+	@extend %contenttext;
+	text-transform: capitalize;
+	background-color: transparent;
+	border: none;
+}

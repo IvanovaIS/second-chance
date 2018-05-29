@@ -1,0 +1,86 @@
+@media screen and (max-width: rem(780px)) {
+	.screenmeeting__content {
+		flex-direction: column;
+
+	}
+
+	.screenmeeting__content-title {
+		text-align: center;
+
+	}
+
+	.screenmeeting__content-titlemode {
+		display: block;
+	}
+
+
+	.menu__item {
+		width: 0;
+	}
+
+	.screenbest__item {
+		flex-basis: 15%;
+	}
+
+	.screenteam__container {
+		left: 0;
+		width: 100%;
+	}
+
+	.screenteam__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+
+	}
+	.screenteam__name {
+		margin-bottom: rem(10px);
+	}
+
+	.screenteam__content {
+		margin-top: rem(10px);
+
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+
+		margin: 0;
+		padding: 0;
+	}
+
+	.screenteam__avatar-img {
+
+		margin: 0 auto;
+	}
+	.screenteam__position {
+		text-align: center;
+	}
+
+	.screenmenu__position_active {
+		width: 100%;
+
+	}
+	.screencomments {
+		min-height: 100%;
+	}
+	.screencomments__item {
+		display: flex;
+		flex-wrap: wrap;
+
+
+		&.screencomments__item {
+			flex-basis: 50%;
+			max-height: 30%;
+		}
+	}
+	.screenform {
+		height: 100%;
+	}
+	.screenform__form {
+		flex-direction: column;
+
+
+
+	}
+}

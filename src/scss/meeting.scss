@@ -1,0 +1,252 @@
+.screenmeeting {
+width: 100%;
+	background-color: black;
+	background-image: url(../img/meeting_screen/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.screenmeeting__container {
+	height: 100vh;
+	min-height: 650px;
+width: 95%;
+	
+	display: flex;
+	
+	
+	flex-direction: column;
+		
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+.header {
+	width: 100%;
+padding-top: rem(8px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	
+}
+
+
+
+.header__navigation {
+	display: flex;
+	align-items: center;
+  
+
+}
+
+.menu__list {
+	display: flex;
+	
+
+	
+	
+	& .menu__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+
+		@include menufont;
+
+		&:after {
+			content: "•";
+			display: block;
+			color: #fff;
+
+
+
+		}
+
+
+		&:last-child:after {
+			content: "";
+			display: block;
+			color: #fff;
+		}
+
+			
+		}
+		
+		@include tablet{
+			display: none;
+		}
+	
+	}
+	
+
+	.menu__item-link {
+		color: #fff;
+		margin: 0 rem(13px);
+
+		align-items: center;
+		
+		
+		&:hover {
+			color: #aaa;
+		}
+		
+		
+	}
+
+
+
+.menu__item-link_button {
+	@include button;
+display: block;
+		
+}
+
+.menu__hamburger {
+	position: relative;
+	vertical-align: middle;
+	height: rem(24px);
+	align-items: center;
+margin-left: rem(20px);
+	display: none;
+	
+	@include tablet {
+		display:flex;}
+	
+//	@include phone {
+//		margin-right: rem(5px);
+//	}
+}
+
+.menu__hamburger-items {
+	
+
+		
+	
+	&, &:before, &:after {
+		
+		 
+		background-color: #fff;
+		width: rem(24px);
+		height: rem(4px);
+		border-radius: rem(3px);
+		 
+		
+		
+	}
+	
+	&:before, &:after{
+		content: "";
+		display:block;
+		position:absolute;}
+		
+		&:before{
+			top:0;
+			
+		}
+		
+	&:after {
+		bottom: 0;
+		
+	}
+	}
+	
+	
+
+
+//...................screenmeeting__block
+.screenmeeting__content {
+
+	display: flex;
+
+	justify-content: center;
+	align-items: flex-start;
+
+
+	
+	@include tablet {
+			flex-direction: column;
+		
+		align-items: center;
+	}
+}
+
+.screenmeeting__content-img {
+
+	width: rem(451px);
+	height: rem(424px);
+	
+
+
+	background-image: url(../img/meeting_screen/burger.png);
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	position: relative;
+
+	margin-left: rem(-40px);
+	margin-right: rem(10px);
+	margin-top: rem(-50px);
+
+	@include tablet {
+		margin: 0;
+	}
+
+	@include phone {
+		width: 300px;
+	}
+}
+
+
+
+.screenmeeting__content-title {
+
+	flex: 0;
+
+	@include titlefont(#f9b43b);
+
+	margin-top: rem(50px);
+
+	@include tablet {
+		margin-top: 0;
+	}
+
+
+
+
+	& .screenmeeting__content-titlemode {
+		font-family: 'Lifehack-Medium', sans-serif;
+		text-transform: lowercase;
+		font-size: 4rem;
+		color: #fff;
+		font-style: italic;
+		font-weight: 400;
+		padding-top: rem(15px);
+
+
+		flex-wrap: wrap;
+		@include phone {
+			font-size: 3.5rem;
+		}
+		
+	}
+	
+	@include tablet {
+		text-align: center;
+	}
+}
+
+
+
+.screenmeeting_arrow-link {
+	display: block;
+	width: rem(30px);
+	height: rem(30px);
+	background-image: url(../img/icons/arrow-scroll.svg);
+	background-repeat: no-repeat;
+	margin: auto; 
+		margin-bottom: rem(30px);
+}
